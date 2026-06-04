@@ -1,0 +1,956 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admisiones — Colegio Internacional Bilingüe</title>
+  <link rel="stylesheet" href="style.css?v=12" />
+</head>
+<body>
+
+  <div class="bg-wrap" aria-hidden="true">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+
+  <div class="form-wrap" id="formWrap">
+
+    <!-- ── Header ── -->
+    <div class="form-header">
+      <div class="header-top">
+        <div class="header-logo header-logo-placeholder">CIB</div>
+        <div class="header-welcome">
+          <span class="brand-name">Colegio Internacional Bilingüe</span>
+          <h1 class="header-title">¡Gracias por dar el primer paso!</h1>
+          <p class="header-sub">Estamos felices de que considere al Colegio Internacional Bilingüe para la educación de su hijo. Complete los siguientes pasos para iniciar formalmente su proceso de inscripción.</p>
+          <div class="header-contact">
+            <span>✉ admissions@colegio.edu.co</span>
+            <span class="hc-sep">·</span>
+            <span>📞 305 401 8421</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="progress-bar" id="progressBar">
+        <div class="progress-line"><div class="progress-line-fill" id="progressLineFill"></div></div>
+        <div class="step-dot active" data-step="1"><span class="step-num">1</span><span class="step-label">Aspir.</span></div>
+        <div class="step-dot"        data-step="2"><span class="step-num">2</span><span class="step-label">Educ.</span></div>
+        <div class="step-dot"        data-step="3"><span class="step-num">3</span><span class="step-label">Acud.1</span></div>
+        <div class="step-dot"        data-step="4"><span class="step-num">4</span><span class="step-label">Acud.2</span></div>
+        <div class="step-dot"        data-step="5"><span class="step-num">5</span><span class="step-label">Fam.</span></div>
+        <div class="step-dot"        data-step="6"><span class="step-num">6</span><span class="step-label">Docs.</span></div>
+        <div class="step-dot"        data-step="7"><span class="step-num">7</span><span class="step-label">Revis.</span></div>
+        <div class="step-dot"        data-step="8"><span class="step-num">8</span><span class="step-label">Cita</span></div>
+        <div class="step-dot"        data-step="9"><span class="step-num">9</span><span class="step-label">Listo</span></div>
+      </div>
+    </div>
+
+    <!-- ── Cuerpo ── -->
+    <div class="form-body">
+
+      <!-- ══════════════════════════════════════
+           PASO 1 — INFORMACIÓN PERSONAL DEL ASPIRANTE
+           ══════════════════════════════════════ -->
+      <div class="step-panel active" id="step1">
+        <div class="step-info-banner">
+          <span class="sib-icon">ℹ</span>
+          <span>Información personal del aspirante. Los campos marcados con <strong>*</strong> son obligatorios.</span>
+        </div>
+        <div class="section-label"><span>🎓</span> Información Personal del Aspirante</div>
+
+        <div class="field-group">
+          <label class="field-label" for="nombreAspirante">Nombre completo <span class="req">*</span></label>
+          <input type="text" id="nombreAspirante" class="field-input" placeholder="Nombre y apellidos completos" />
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="tipoDocAspirante">Tipo de documento</label>
+            <select id="tipoDocAspirante" class="field-input field-select">
+              <option value="">Seleccione</option>
+              <option value="RC">Registro Civil</option>
+              <option value="TI">Tarjeta de Identidad</option>
+              <option value="CC">Cédula de Ciudadanía</option>
+              <option value="Pasaporte">Pasaporte</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="numDocAspirante">Número de documento</label>
+            <input type="text" id="numDocAspirante" class="field-input" placeholder="Número" />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="lugarNacAspirante">Lugar de nacimiento</label>
+          <input type="text" id="lugarNacAspirante" class="field-input" placeholder="Ciudad, País" />
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label">Fecha de nacimiento <span class="req">*</span></label>
+            <div class="date-row">
+              <input type="number" id="diaNacAspirante" class="field-input" placeholder="DD" min="1" max="31" />
+              <select id="mesNacAspirante" class="field-input field-select">
+                <option value="">Mes</option>
+                <option value="01">Enero</option><option value="02">Febrero</option><option value="03">Marzo</option>
+                <option value="04">Abril</option><option value="05">Mayo</option><option value="06">Junio</option>
+                <option value="07">Julio</option><option value="08">Agosto</option><option value="09">Septiembre</option>
+                <option value="10">Octubre</option><option value="11">Noviembre</option><option value="12">Diciembre</option>
+              </select>
+              <input type="number" id="anioNacAspirante" class="field-input" placeholder="AAAA" min="2000" max="2030" />
+            </div>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="nacionalidadTextAspirante">Nacionalidad</label>
+            <input type="text" id="nacionalidadTextAspirante" class="field-input" placeholder="Ej. Colombiana" />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Nacionalidad para el proceso <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="nacionalidadAspirante" value="col" /><span class="radio-box"><span class="radio-icon">🇨🇴</span><span>Colombiana</span></span></label>
+            <label class="radio-option"><input type="radio" name="nacionalidadAspirante" value="ext" /><span class="radio-box"><span class="radio-icon">🌍</span><span>Extranjera</span></span></label>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Actualmente vive con <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="viveCon" value="ambos_padres" /><span class="radio-box"><span>Ambos padres</span></span></label>
+            <label class="radio-option"><input type="radio" name="viveCon" value="mama" /><span class="radio-box"><span>Mamá</span></span></label>
+            <label class="radio-option"><input type="radio" name="viveCon" value="papa" /><span class="radio-box"><span>Papá</span></span></label>
+            <label class="radio-option"><input type="radio" name="viveCon" value="otro" /><span class="radio-box"><span>Otro</span></span></label>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="telefonoAspirante">Teléfono</label>
+            <input type="tel" id="telefonoAspirante" class="field-input" placeholder="+57 300 000 0000" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="direccionAspirante">Dirección</label>
+            <input type="text" id="direccionAspirante" class="field-input" placeholder="Dirección de residencia" />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="idiomasAspirante">Idiomas</label>
+          <input type="text" id="idiomasAspirante" class="field-input" placeholder="Ej. Español, Francés, Inglés" />
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="grado">Año escolar de ingreso <span class="req">*</span></label>
+          <select id="grado" class="field-input field-select">
+            <option value="">Seleccione el año escolar</option>
+            <option value="2026-2027">2026-2027 — Año escolar, inicio en septiembre</option>
+            <option value="2027-2028">2027-2028 — Año escolar, inicio en septiembre</option>
+            <option value="2028-2029">2028-2029 — Año escolar, inicio en septiembre</option>
+            <option value="2029-2030">2029-2030 — Año escolar, inicio en septiembre</option>
+            <option value="2030-2031">2030-2031 — Año escolar, inicio en septiembre</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="razones">¿Cuáles son las razones por las cuales quiere escolarizar a su hijo en el Colegio Bilingüe?</label>
+          <textarea id="razones" class="field-input" rows="4" placeholder="Escriba aquí sus razones..."></textarea>
+        </div>
+
+        <div class="step-actions">
+          <button class="btn-primary" id="btn1Next">Siguiente →</button>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════
+           PASO 2 — EDUCACIÓN ANTERIOR DEL ASPIRANTE
+           ══════════════════════════════════════ -->
+      <div class="step-panel" id="step2">
+        <div class="step-info-banner">
+          <span class="sib-icon">ℹ</span>
+          <span>Información sobre la educación anterior del aspirante y conocimiento del sistema educativo francés.</span>
+        </div>
+        <div class="section-label"><span>📚</span> Conocimiento del Sistema Educativo</div>
+
+        <div class="field-group">
+          <label class="field-label" for="conoceSistema">¿Conoce usted el sistema educativo francés? Descríbalo</label>
+          <textarea id="conoceSistema" class="field-input" rows="4" placeholder="Describa su conocimiento del sistema educativo francés..."></textarea>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="filosofia">¿Cuál es su filosofía acerca de la educación y el rol de los padres en la educación de sus hijos?</label>
+          <textarea id="filosofia" class="field-input" rows="4" placeholder="Comparta su filosofía educativa..."></textarea>
+        </div>
+
+        <div class="section-label"><span>🏫</span> Educación Anterior del Aspirante</div>
+
+        <div class="field-group">
+          <label class="field-label">¿El candidato viene de un Colegio Bilingüe?</label>
+          <div class="radio-group sino-group">
+            <label class="radio-option"><input type="radio" name="vieneLiceoFrances" value="si" /><span class="radio-box"><span>Sí</span></span></label>
+            <label class="radio-option"><input type="radio" name="vieneLiceoFrances" value="no" /><span class="radio-box"><span>No</span></span></label>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">¿El candidato viene de guardería?</label>
+          <div class="radio-group sino-group">
+            <label class="radio-option"><input type="radio" name="vieneGuarderia" value="si" /><span class="radio-box"><span>Sí</span></span></label>
+            <label class="radio-option"><input type="radio" name="vieneGuarderia" value="no" /><span class="radio-box"><span>No</span></span></label>
+          </div>
+        </div>
+
+        <div class="field-row field-row-3">
+          <div class="field-group">
+            <label class="field-label" for="gradoAnterior">Grado</label>
+            <input type="text" id="gradoAnterior" class="field-input" placeholder="Ej. 3° primaria" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="institucionAnterior">Institución</label>
+            <input type="text" id="institucionAnterior" class="field-input" placeholder="Nombre del colegio" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="anioAnterior">Año</label>
+            <input type="text" id="anioAnterior" class="field-input" placeholder="Ej. 2025" />
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">¿La institución era bilingüe?</label>
+          <div class="radio-group sino-group">
+            <label class="radio-option"><input type="radio" name="institucionBilingue" value="si" /><span class="radio-box"><span>Sí</span></span></label>
+            <label class="radio-option"><input type="radio" name="institucionBilingue" value="no" /><span class="radio-box"><span>No</span></span></label>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="idiomaInstitucion">Idioma de la institución</label>
+          <input type="text" id="idiomaInstitucion" class="field-input" placeholder="Ej. Español-Inglés" />
+        </div>
+
+        <div class="step-actions">
+          <button class="btn-secondary" id="btn2Back">← Anterior</button>
+          <button class="btn-primary"   id="btn2Next">Siguiente →</button>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════
+           PASO 3 — INFORMACIÓN ACUDIENTE 1
+           ══════════════════════════════════════ -->
+      <div class="step-panel" id="step3">
+        <div class="step-info-banner">
+          <span class="sib-icon">ℹ</span>
+          <span>Información completa del primer acudiente (padre, madre o tutor legal).</span>
+        </div>
+        <div class="section-label"><span>👤</span> Información Acudiente 1</div>
+
+        <div class="field-group">
+          <label class="field-label" for="nombreAcud1">Nombre completo <span class="req">*</span></label>
+          <input type="text" id="nombreAcud1" class="field-input" placeholder="Nombre y apellidos completos" />
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="lugarNacAcud1">Lugar de nacimiento</label>
+            <input type="text" id="lugarNacAcud1" class="field-input" placeholder="Ciudad, País" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="nacionalidadAcud1">Nacionalidad</label>
+            <input type="text" id="nacionalidadAcud1" class="field-input" placeholder="Ej. Colombiana" />
+          </div>
+        </div>
+
+        <div class="subsection-title">Documento de identidad</div>
+        <div class="field-row field-row-3">
+          <div class="field-group">
+            <label class="field-label" for="tipoDocAcud1">Tipo</label>
+            <select id="tipoDocAcud1" class="field-input field-select">
+              <option value="">Tipo</option>
+              <option value="CC">Cédula de Ciudadanía</option>
+              <option value="CE">Cédula de Extranjería</option>
+              <option value="Pasaporte">Pasaporte</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="numDocAcud1">Número</label>
+            <input type="text" id="numDocAcud1" class="field-input" placeholder="Número" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="expedidoEnAcud1">Expedido en</label>
+            <input type="text" id="expedidoEnAcud1" class="field-input" placeholder="Ciudad" />
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label">Fecha de nacimiento</label>
+          <div class="date-row">
+            <input type="number" id="diaNacAcud1" class="field-input" placeholder="DD" min="1" max="31" />
+            <select id="mesNacAcud1" class="field-input field-select">
+              <option value="">Mes</option>
+              <option value="01">Enero</option><option value="02">Febrero</option><option value="03">Marzo</option>
+              <option value="04">Abril</option><option value="05">Mayo</option><option value="06">Junio</option>
+              <option value="07">Julio</option><option value="08">Agosto</option><option value="09">Septiembre</option>
+              <option value="10">Octubre</option><option value="11">Noviembre</option><option value="12">Diciembre</option>
+            </select>
+            <input type="number" id="anioNacAcud1" class="field-input" placeholder="AAAA" min="1940" max="2005" />
+          </div>
+        </div>
+
+        <div class="subsection-title">Estudios</div>
+        <div class="field-group">
+          <label class="field-label" for="colegioSecAcud1">Colegio en el que realizó sus estudios secundarios</label>
+          <input type="text" id="colegioSecAcud1" class="field-input" placeholder="Nombre del colegio" />
+        </div>
+        <div class="field-group">
+          <label class="field-label">Estudios superiores</label>
+          <div class="checkbox-group">
+            <label class="checkbox-inline"><input type="checkbox" id="univAcud1" /><span>Universitarios</span></label>
+            <label class="checkbox-inline"><input type="checkbox" id="espAcud1" /><span>Especialización</span></label>
+            <label class="checkbox-inline"><input type="checkbox" id="maestAcud1" /><span>Maestría</span></label>
+            <label class="checkbox-inline"><input type="checkbox" id="docAcud1" /><span>Doctorado</span></label>
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="univTituloAcud1">¿De qué universidad es su título profesional?</label>
+          <input type="text" id="univTituloAcud1" class="field-input" placeholder="Universidad" />
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="univUltimoGradoAcud1">¿De qué universidad es el último grado adquirido?</label>
+          <input type="text" id="univUltimoGradoAcud1" class="field-input" placeholder="Universidad" />
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="idiomasAcud1">Idiomas</label>
+          <input type="text" id="idiomasAcud1" class="field-input" placeholder="Ej. Español, Francés, Inglés" />
+        </div>
+
+        <div class="subsection-title">Ocupación</div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="profesionAcud1">Profesión</label>
+            <input type="text" id="profesionAcud1" class="field-input" placeholder="Profesión" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="ocupacionAcud1">Ocupación</label>
+            <input type="text" id="ocupacionAcud1" class="field-input" placeholder="Ocupación actual" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="empresaAcud1">Empresa</label>
+            <input type="text" id="empresaAcud1" class="field-input" placeholder="Empresa donde trabaja" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="cargoAcud1">Cargo</label>
+            <input type="text" id="cargoAcud1" class="field-input" placeholder="Cargo que desempeña" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="dirOficinaAcud1">Dirección oficina</label>
+            <input type="text" id="dirOficinaAcud1" class="field-input" placeholder="Dirección" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="telOficinaAcud1">Teléfono oficina</label>
+            <input type="tel" id="telOficinaAcud1" class="field-input" placeholder="Tel. oficina" />
+          </div>
+        </div>
+
+        <div class="subsection-title">Contacto</div>
+        <div class="field-group">
+          <label class="field-label" for="dirResidenciaAcud1">Dirección residencia</label>
+          <input type="text" id="dirResidenciaAcud1" class="field-input" placeholder="Dirección completa" />
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="edificioAcud1">Edificio / Unidad residencial</label>
+            <input type="text" id="edificioAcud1" class="field-input" placeholder="Edificio o conjunto" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="barrioAcud1">Barrio</label>
+            <input type="text" id="barrioAcud1" class="field-input" placeholder="Barrio" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="celular1Acud1">Celular 1 <span class="req">*</span></label>
+            <input type="tel" id="celular1Acud1" class="field-input" placeholder="+57 300 000 0000" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="celular2Acud1">Celular 2 <span class="opt">(opcional)</span></label>
+            <input type="tel" id="celular2Acud1" class="field-input" placeholder="+57 300 000 0000" />
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="emailAcud1">Correo electrónico <span class="req">*</span></label>
+          <input type="email" id="emailAcud1" class="field-input" placeholder="correo@ejemplo.com" />
+        </div>
+
+        <div class="subsection-title">Para efectos del proceso de admisión</div>
+        <div class="field-group">
+          <label class="field-label">Situación laboral <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="situacionLaboral" value="emp" /><span class="radio-box"><span>Empleados</span></span></label>
+            <label class="radio-option"><input type="radio" name="situacionLaboral" value="ind" /><span class="radio-box"><span>Independientes</span></span></label>
+            <label class="radio-option"><input type="radio" name="situacionLaboral" value="mix" /><span class="radio-box"><span>Mixto</span></span></label>
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label">Nacionalidad de los padres <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="nacionalidadPadres" value="col" /><span class="radio-box"><span class="radio-icon">🇨🇴</span><span>Colombiana</span></span></label>
+            <label class="radio-option"><input type="radio" name="nacionalidadPadres" value="ext" /><span class="radio-box"><span class="radio-icon">🌍</span><span>Extranjera</span></span></label>
+            <label class="radio-option"><input type="radio" name="nacionalidadPadres" value="fra" /><span class="radio-box"><span class="radio-icon">🇫🇷</span><span>Francesa</span></span></label>
+          </div>
+        </div>
+
+        <div class="subsection-title">Otro matrimonio</div>
+        <div class="field-group">
+          <label class="field-label" for="conyugeAcud1">Cónyuge</label>
+          <input type="text" id="conyugeAcud1" class="field-input" placeholder="Nombre del cónyuge" />
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="hijo1NomAcud1">Hijo 1 — Nombre</label>
+            <input type="text" id="hijo1NomAcud1" class="field-input" placeholder="Nombre completo" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="hijo1EdadAcud1">Edad</label>
+            <input type="number" id="hijo1EdadAcud1" class="field-input" placeholder="Edad" min="0" max="30" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="hijo2NomAcud1">Hijo 2 — Nombre</label>
+            <input type="text" id="hijo2NomAcud1" class="field-input" placeholder="Nombre completo" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="hijo2EdadAcud1">Edad</label>
+            <input type="number" id="hijo2EdadAcud1" class="field-input" placeholder="Edad" min="0" max="30" />
+          </div>
+        </div>
+
+        <div class="subsection-title">Información del Abuelo del Aspirante (Acudiente 1)</div>
+        <div class="field-group">
+          <label class="field-label" for="abueloNomAcud1">Nombre completo</label>
+          <input type="text" id="abueloNomAcud1" class="field-input" placeholder="Nombre del abuelo" />
+        </div>
+        <div class="field-row field-row-3">
+          <div class="field-group">
+            <label class="field-label" for="abueloProfAcud1">Profesión</label>
+            <input type="text" id="abueloProfAcud1" class="field-input" placeholder="Profesión" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="abueloOcupAcud1">Ocupación</label>
+            <input type="text" id="abueloOcupAcud1" class="field-input" placeholder="Ocupación" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="abueloEmpAcud1">Empresa donde laboró</label>
+            <input type="text" id="abueloEmpAcud1" class="field-input" placeholder="Empresa" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="abueloDirAcud1">Dirección residencia</label>
+            <input type="text" id="abueloDirAcud1" class="field-input" placeholder="Dirección" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="abueloCelAcud1">Celular</label>
+            <input type="tel" id="abueloCelAcud1" class="field-input" placeholder="Celular" />
+          </div>
+        </div>
+
+        <div class="subsection-title">Información de la Abuela del Aspirante (Acudiente 1)</div>
+        <div class="field-group">
+          <label class="field-label" for="abuelaNomAcud1">Nombre completo</label>
+          <input type="text" id="abuelaNomAcud1" class="field-input" placeholder="Nombre de la abuela" />
+        </div>
+        <div class="field-row field-row-3">
+          <div class="field-group">
+            <label class="field-label" for="abuelaProfAcud1">Profesión</label>
+            <input type="text" id="abuelaProfAcud1" class="field-input" placeholder="Profesión" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="abuelaOcupAcud1">Ocupación</label>
+            <input type="text" id="abuelaOcupAcud1" class="field-input" placeholder="Ocupación" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="abuelaEmpAcud1">Empresa donde laboró</label>
+            <input type="text" id="abuelaEmpAcud1" class="field-input" placeholder="Empresa" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="abuelaDirAcud1">Dirección residencia</label>
+            <input type="text" id="abuelaDirAcud1" class="field-input" placeholder="Dirección" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="abuelaCelAcud1">Celular</label>
+            <input type="tel" id="abuelaCelAcud1" class="field-input" placeholder="Celular" />
+          </div>
+        </div>
+
+        <div class="step-actions">
+          <button class="btn-secondary" id="btn3Back">← Anterior</button>
+          <button class="btn-primary"   id="btn3Next">Siguiente →</button>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════
+           PASO 4 — INFORMACIÓN ACUDIENTE 2
+           ══════════════════════════════════════ -->
+      <div class="step-panel" id="step4">
+        <div class="step-info-banner">
+          <span class="sib-icon">ℹ</span>
+          <span>Información completa del segundo acudiente (padre, madre o tutor legal).</span>
+        </div>
+        <div class="section-label"><span>👤</span> Información Acudiente 2</div>
+
+        <div class="field-group">
+          <label class="field-label" for="nombreAcud2">Nombre completo <span class="req">*</span></label>
+          <input type="text" id="nombreAcud2" class="field-input" placeholder="Nombre y apellidos completos" />
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="lugarNacAcud2">Lugar de nacimiento</label>
+            <input type="text" id="lugarNacAcud2" class="field-input" placeholder="Ciudad, País" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="nacionalidadAcud2">Nacionalidad</label>
+            <input type="text" id="nacionalidadAcud2" class="field-input" placeholder="Ej. Colombiana" />
+          </div>
+        </div>
+
+        <div class="subsection-title">Documento de identidad</div>
+        <div class="field-row field-row-3">
+          <div class="field-group">
+            <label class="field-label" for="tipoDocAcud2">Tipo</label>
+            <select id="tipoDocAcud2" class="field-input field-select">
+              <option value="">Tipo</option>
+              <option value="CC">Cédula de Ciudadanía</option>
+              <option value="CE">Cédula de Extranjería</option>
+              <option value="Pasaporte">Pasaporte</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="numDocAcud2">Número</label>
+            <input type="text" id="numDocAcud2" class="field-input" placeholder="Número" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="expedidoEnAcud2">Expedido en</label>
+            <input type="text" id="expedidoEnAcud2" class="field-input" placeholder="Ciudad" />
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label">Fecha de nacimiento</label>
+          <div class="date-row">
+            <input type="number" id="diaNacAcud2" class="field-input" placeholder="DD" min="1" max="31" />
+            <select id="mesNacAcud2" class="field-input field-select">
+              <option value="">Mes</option>
+              <option value="01">Enero</option><option value="02">Febrero</option><option value="03">Marzo</option>
+              <option value="04">Abril</option><option value="05">Mayo</option><option value="06">Junio</option>
+              <option value="07">Julio</option><option value="08">Agosto</option><option value="09">Septiembre</option>
+              <option value="10">Octubre</option><option value="11">Noviembre</option><option value="12">Diciembre</option>
+            </select>
+            <input type="number" id="anioNacAcud2" class="field-input" placeholder="AAAA" min="1940" max="2005" />
+          </div>
+        </div>
+
+        <div class="subsection-title">Estudios</div>
+        <div class="field-group">
+          <label class="field-label" for="colegioSecAcud2">Colegio en el que realizó sus estudios secundarios</label>
+          <input type="text" id="colegioSecAcud2" class="field-input" placeholder="Nombre del colegio" />
+        </div>
+        <div class="field-group">
+          <label class="field-label">Estudios superiores</label>
+          <div class="checkbox-group">
+            <label class="checkbox-inline"><input type="checkbox" id="univAcud2" /><span>Universitarios</span></label>
+            <label class="checkbox-inline"><input type="checkbox" id="espAcud2" /><span>Especialización</span></label>
+            <label class="checkbox-inline"><input type="checkbox" id="maestAcud2" /><span>Maestría</span></label>
+            <label class="checkbox-inline"><input type="checkbox" id="docAcud2" /><span>Doctorado</span></label>
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="univTituloAcud2">¿De qué universidad es su título profesional?</label>
+          <input type="text" id="univTituloAcud2" class="field-input" placeholder="Universidad" />
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="univUltimoGradoAcud2">¿De qué universidad es el último grado adquirido?</label>
+          <input type="text" id="univUltimoGradoAcud2" class="field-input" placeholder="Universidad" />
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="idiomasAcud2">Idiomas</label>
+          <input type="text" id="idiomasAcud2" class="field-input" placeholder="Ej. Español, Francés, Inglés" />
+        </div>
+
+        <div class="subsection-title">Ocupación</div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="profesionAcud2">Profesión</label>
+            <input type="text" id="profesionAcud2" class="field-input" placeholder="Profesión" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="ocupacionAcud2">Ocupación</label>
+            <input type="text" id="ocupacionAcud2" class="field-input" placeholder="Ocupación actual" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="empresaAcud2">Empresa</label>
+            <input type="text" id="empresaAcud2" class="field-input" placeholder="Empresa donde trabaja" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="cargoAcud2">Cargo</label>
+            <input type="text" id="cargoAcud2" class="field-input" placeholder="Cargo que desempeña" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="dirOficinaAcud2">Dirección oficina</label>
+            <input type="text" id="dirOficinaAcud2" class="field-input" placeholder="Dirección" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="telOficinaAcud2">Teléfono oficina</label>
+            <input type="tel" id="telOficinaAcud2" class="field-input" placeholder="Tel. oficina" />
+          </div>
+        </div>
+
+        <div class="subsection-title">Contacto</div>
+        <div class="field-group">
+          <label class="field-label" for="dirResidenciaAcud2">Dirección residencia</label>
+          <input type="text" id="dirResidenciaAcud2" class="field-input" placeholder="Dirección completa" />
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="edificioAcud2">Edificio / Unidad residencial</label>
+            <input type="text" id="edificioAcud2" class="field-input" placeholder="Edificio o conjunto" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="barrioAcud2">Barrio</label>
+            <input type="text" id="barrioAcud2" class="field-input" placeholder="Barrio" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="celular1Acud2">Celular 1 <span class="req">*</span></label>
+            <input type="tel" id="celular1Acud2" class="field-input" placeholder="+57 300 000 0000" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="celular2Acud2">Celular 2 <span class="opt">(opcional)</span></label>
+            <input type="tel" id="celular2Acud2" class="field-input" placeholder="+57 300 000 0000" />
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="emailAcud2">Correo electrónico</label>
+          <input type="email" id="emailAcud2" class="field-input" placeholder="correo@ejemplo.com" />
+        </div>
+
+        <div class="subsection-title">Otro matrimonio</div>
+        <div class="field-group">
+          <label class="field-label" for="conyugeAcud2">Cónyuge</label>
+          <input type="text" id="conyugeAcud2" class="field-input" placeholder="Nombre del cónyuge" />
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="hijo1NomAcud2">Hijo 1 — Nombre</label>
+            <input type="text" id="hijo1NomAcud2" class="field-input" placeholder="Nombre completo" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="hijo1EdadAcud2">Edad</label>
+            <input type="number" id="hijo1EdadAcud2" class="field-input" placeholder="Edad" min="0" max="30" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="hijo2NomAcud2">Hijo 2 — Nombre</label>
+            <input type="text" id="hijo2NomAcud2" class="field-input" placeholder="Nombre completo" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="hijo2EdadAcud2">Edad</label>
+            <input type="number" id="hijo2EdadAcud2" class="field-input" placeholder="Edad" min="0" max="30" />
+          </div>
+        </div>
+
+        <div class="subsection-title">Información del Abuelo del Aspirante (Acudiente 2)</div>
+        <div class="field-group">
+          <label class="field-label" for="abueloNomAcud2">Nombre completo</label>
+          <input type="text" id="abueloNomAcud2" class="field-input" placeholder="Nombre del abuelo" />
+        </div>
+        <div class="field-row field-row-3">
+          <div class="field-group">
+            <label class="field-label" for="abueloProfAcud2">Profesión</label>
+            <input type="text" id="abueloProfAcud2" class="field-input" placeholder="Profesión" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="abueloOcupAcud2">Ocupación</label>
+            <input type="text" id="abueloOcupAcud2" class="field-input" placeholder="Ocupación" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="abueloEmpAcud2">Empresa donde laboró</label>
+            <input type="text" id="abueloEmpAcud2" class="field-input" placeholder="Empresa" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="abueloDirAcud2">Dirección residencia</label>
+            <input type="text" id="abueloDirAcud2" class="field-input" placeholder="Dirección" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="abueloCelAcud2">Celular</label>
+            <input type="tel" id="abueloCelAcud2" class="field-input" placeholder="Celular" />
+          </div>
+        </div>
+
+        <div class="subsection-title">Información de la Abuela del Aspirante (Acudiente 2)</div>
+        <div class="field-group">
+          <label class="field-label" for="abuelaNomAcud2">Nombre completo</label>
+          <input type="text" id="abuelaNomAcud2" class="field-input" placeholder="Nombre de la abuela" />
+        </div>
+        <div class="field-row field-row-3">
+          <div class="field-group">
+            <label class="field-label" for="abuelaProfAcud2">Profesión</label>
+            <input type="text" id="abuelaProfAcud2" class="field-input" placeholder="Profesión" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="abuelaOcupAcud2">Ocupación</label>
+            <input type="text" id="abuelaOcupAcud2" class="field-input" placeholder="Ocupación" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="abuelaEmpAcud2">Empresa donde laboró</label>
+            <input type="text" id="abuelaEmpAcud2" class="field-input" placeholder="Empresa" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="abuelaDirAcud2">Dirección residencia</label>
+            <input type="text" id="abuelaDirAcud2" class="field-input" placeholder="Dirección" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="abuelaCelAcud2">Celular</label>
+            <input type="tel" id="abuelaCelAcud2" class="field-input" placeholder="Celular" />
+          </div>
+        </div>
+
+        <div class="step-actions">
+          <button class="btn-secondary" id="btn4Back">← Anterior</button>
+          <button class="btn-primary"   id="btn4Next">Siguiente →</button>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════
+           PASO 5 — HERMANOS Y AUTORIZACIONES
+           ══════════════════════════════════════ -->
+      <div class="step-panel" id="step5">
+        <div class="step-info-banner">
+          <span class="sib-icon">ℹ</span>
+          <span>Información de los hermanos del aspirante y autorizaciones requeridas.</span>
+        </div>
+        <div class="section-label"><span>👨‍👩‍👧‍👦</span> Hermanos del Aspirante</div>
+
+        <div class="field-row field-row-3">
+          <div class="field-group">
+            <label class="field-label" for="herm1Nombre">Hermano 1 — Nombre</label>
+            <input type="text" id="herm1Nombre" class="field-input" placeholder="Nombre completo" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="herm1Edad">Edad</label>
+            <input type="number" id="herm1Edad" class="field-input" placeholder="Edad" min="0" max="30" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="herm1Colegio">Colegio / Universidad</label>
+            <input type="text" id="herm1Colegio" class="field-input" placeholder="Institución" />
+          </div>
+        </div>
+        <div class="field-row field-row-3">
+          <div class="field-group">
+            <label class="field-label" for="herm2Nombre">Hermano 2 — Nombre</label>
+            <input type="text" id="herm2Nombre" class="field-input" placeholder="Nombre completo" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="herm2Edad">Edad</label>
+            <input type="number" id="herm2Edad" class="field-input" placeholder="Edad" min="0" max="30" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="herm2Colegio">Colegio / Universidad</label>
+            <input type="text" id="herm2Colegio" class="field-input" placeholder="Institución" />
+          </div>
+        </div>
+        <div class="field-row field-row-3">
+          <div class="field-group">
+            <label class="field-label" for="herm3Nombre">Hermano 3 — Nombre</label>
+            <input type="text" id="herm3Nombre" class="field-input" placeholder="Nombre completo" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="herm3Edad">Edad</label>
+            <input type="number" id="herm3Edad" class="field-input" placeholder="Edad" min="0" max="30" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="herm3Colegio">Colegio / Universidad</label>
+            <input type="text" id="herm3Colegio" class="field-input" placeholder="Institución" />
+          </div>
+        </div>
+
+        <div class="section-label" style="margin-top:18px"><span>✅</span> Autorizaciones</div>
+
+        <div class="field-group">
+          <label class="field-label">Autorizo al Colegio Internacional Bilingüe verificar la información suministrada <span class="req">*</span></label>
+          <div class="radio-group sino-group">
+            <label class="radio-option"><input type="radio" name="autorizaVerificar" value="si" /><span class="radio-box"><span>Sí</span></span></label>
+            <label class="radio-option"><input type="radio" name="autorizaVerificar" value="no" /><span class="radio-box"><span>No</span></span></label>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Autorizo el tratamiento de nuestros datos personales establecidos en la política vigente del Colegio Internacional Bilingüe <span class="req">*</span></label>
+          <div class="radio-group sino-group">
+            <label class="radio-option"><input type="radio" name="autorizaDatos" value="si" /><span class="radio-box"><span>Sí</span></span></label>
+            <label class="radio-option"><input type="radio" name="autorizaDatos" value="no" /><span class="radio-box"><span>No</span></span></label>
+          </div>
+        </div>
+
+        <div class="step-actions">
+          <button class="btn-secondary" id="btn5Back">← Anterior</button>
+          <button class="btn-primary"   id="btn5Next">Siguiente →</button>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════
+           PASO 6 — DOCUMENTOS
+           ══════════════════════════════════════ -->
+      <div class="step-panel" id="step6">
+        <div class="step-info-banner">
+          <span class="sib-icon">ℹ</span>
+          <span>Suba cada documento en PDF, JPG o PNG. Máximo 10 MB por archivo.</span>
+        </div>
+
+        <div class="payment-banner">
+          <div class="payment-banner-icon">💳</div>
+          <div class="payment-banner-text">
+            <strong>Pago valoraciones técnicas: $350.000</strong>
+            <span>Realice el pago antes de continuar y suba el comprobante.</span>
+          </div>
+          <a href="https://bit.ly/3fih93H" target="_blank" rel="noopener" class="payment-link">Pagar →</a>
+        </div>
+
+        <div class="section-label"><span>📎</span> Documentos requeridos</div>
+        <div class="docs-list" id="docsList"></div>
+
+        <div class="step-actions">
+          <button class="btn-secondary" id="btn6Back">← Anterior</button>
+          <button class="btn-primary"   id="btn6Next">Siguiente →</button>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════
+           PASO 7 — REVISIÓN
+           ══════════════════════════════════════ -->
+      <div class="step-panel" id="step7">
+        <div class="step-info-banner">
+          <span class="sib-icon">ℹ</span>
+          <span>Verifique que todos los documentos obligatorios estén cargados antes de continuar.</span>
+        </div>
+
+        <div class="review-progress-wrap">
+          <div class="review-progress-bar"><div class="review-progress-fill" id="reviewProgressFill"></div></div>
+          <span class="review-progress-label" id="reviewProgressLabel">0 de 0</span>
+        </div>
+
+        <div class="section-label"><span>✅</span> Estado de documentos</div>
+        <div class="review-list" id="reviewList"></div>
+
+        <div id="alertaFaltantes" class="step-info-banner info-red hidden">
+          <span class="sib-icon">⚠</span>
+          <span id="alertaFaltantesText">Faltan documentos obligatorios.</span>
+        </div>
+
+        <div class="field-group" style="margin-top:14px">
+          <label class="checkbox-option">
+            <input type="checkbox" id="declaracion" />
+            <span class="checkbox-box"></span>
+            <span class="checkbox-label">Declaro que toda la información y documentos proporcionados son verídicos y auténticos.</span>
+          </label>
+        </div>
+
+        <div class="step-actions">
+          <button class="btn-secondary" id="btn7Back">← Anterior</button>
+          <button class="btn-primary"   id="btn7Next">Continuar →</button>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════
+           PASO 8 — AGENDA DE ENTREVISTA
+           ══════════════════════════════════════ -->
+      <div class="step-panel" id="step8">
+        <div class="step-info-banner">
+          <span class="sib-icon">ℹ</span>
+          <span>Seleccione una fecha y hora disponible. Solo días hábiles de lunes a viernes.</span>
+        </div>
+        <div class="section-label"><span>📅</span> Seleccione fecha y hora</div>
+
+        <div class="calendar-wrap">
+          <div class="cal-nav">
+            <button class="cal-nav-btn" id="calPrev">&#8249;</button>
+            <span class="cal-month-label" id="calMonthLabel"></span>
+            <button class="cal-nav-btn" id="calNext">&#8250;</button>
+          </div>
+          <div class="cal-grid">
+            <div class="cal-weekday">L</div><div class="cal-weekday">M</div><div class="cal-weekday">X</div>
+            <div class="cal-weekday">J</div><div class="cal-weekday">V</div><div class="cal-weekday">S</div><div class="cal-weekday">D</div>
+          </div>
+          <div class="cal-days" id="calDays"></div>
+        </div>
+
+        <div class="slots-wrap" id="slotsWrap">
+          <div class="slots-heading" id="slotsHeading">Selecciona un día para ver horarios disponibles</div>
+          <div class="slots-list" id="slotsList"></div>
+        </div>
+
+        <div class="step-actions">
+          <button class="btn-secondary" id="btn8Back">← Anterior</button>
+          <button class="btn-primary hidden" id="btn8Next">Confirmar cita →</button>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════
+           PASO 9 — CONFIRMACIÓN
+           ══════════════════════════════════════ -->
+      <div class="step-panel" id="step9">
+        <div class="success-wrap">
+          <div class="success-icon-wrap">
+            <div class="success-icon">
+              <svg viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="25" stroke="white" stroke-width="2"/><path d="M14 27L22 35L38 18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <h2 class="success-title">¡Solicitud confirmada!</h2>
+          <p class="success-sub">Tu entrevista ha sido agendada exitosamente.</p>
+          <div class="success-summary" id="successSummary"></div>
+          <div class="success-email-note">Correo de confirmación enviado a <strong id="successEmail"></strong></div>
+          <div class="success-note"><span>📌</span> Por favor llega <strong>10 minutos antes</strong> de tu entrevista.</div>
+        </div>
+      </div>
+
+    </div><!-- /form-body -->
+  </div><!-- /form-wrap -->
+
+  <!-- Modal -->
+  <div class="modal-overlay hidden" id="modalOverlay">
+    <div class="modal-box">
+      <div class="modal-icon" id="modalIcon">⚠️</div>
+      <h3 class="modal-title" id="modalTitle">Atención</h3>
+      <p class="modal-msg" id="modalMsg"></p>
+      <button class="btn-primary" id="modalClose">Entendido</button>
+    </div>
+  </div>
+
+  <!-- Loader -->
+  <div class="loader-overlay hidden" id="loaderOverlay">
+    <div class="loader-box">
+      <div class="loader-spinner"></div>
+      <p class="loader-text" id="loaderText">Procesando...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
